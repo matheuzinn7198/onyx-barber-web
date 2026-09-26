@@ -1,0 +1,15 @@
+:root {
+  --primary: #39FF14;
+  --primary-dark: #00C853;
+
+  --background: #0A0A0A;
+  --surface: #141414;
+  --card: #1A1A1A;
+
+  --text: #FFFFFF;
+  --text-secondary: #B5B5B5;
+
+  --border: #2A2A2A;
+
+  --radius: 12px;
+}
