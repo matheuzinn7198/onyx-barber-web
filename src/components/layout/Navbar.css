@@ -1,0 +1,94 @@
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid #1f1f1f;
+}
+
+.navbar-content {
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.logo span {
+  display: block;
+  font-size: 0.7rem;
+  color: #39ff14;
+  letter-spacing: 5px;
+}
+
+.menu {
+  display: flex;
+  gap: 2rem;
+
+  list-style: none;
+  color: white;
+}
+
+.menu li {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menu li:hover {
+  color: #39ff14;
+}
+
+.login-btn {
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+
+  border: 1px solid #39ff14;
+  background: transparent;
+
+  color: white;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background: #39ff14;
+  color: #0a0a0a;
+}
+
+/* TABLET */
+
+@media (max-width: 992px) {
+
+  .menu {
+    gap: 1rem;
+  }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .menu {
+    display: none;
+  }
+
+  .login-btn {
+    display: none;
+  }
+
+}

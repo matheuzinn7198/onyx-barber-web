@@ -1,108 +1,60 @@
-# 💈 Onyx Barber Web
+# 🚀 Onyx Barber System
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-39FF14?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/React-Frontend-61DAFB?style=for-the-badge&logo=react" />
-  <img src="https://img.shields.io/badge/Node.js-Backend-339933?style=for-the-badge&logo=node.js" />
-  <img src="https://img.shields.io/badge/PostgreSQL-Database-4169E1?style=for-the-badge&logo=postgresql" />
-</p>
+Sistema web profissional para gerenciamento de barbearias.
+
+Projeto desenvolvido com foco em escalabilidade, experiência do usuário e arquitetura preparada para crescimento futuro.
 
 ---
 
-## 📖 Sobre o Projeto
+## 📌 Status do Projeto
 
-O **Onyx Barber Web** é uma plataforma profissional desenvolvida para modernizar e automatizar o gerenciamento da **Onyx Barber**, localizada em Limeira/SP.
+### ✅ Concluído
 
-O projeto vai muito além de um simples sistema de agendamento, tendo como objetivo evoluir para uma plataforma completa de gestão para barbearias.
-
----
-
-## 🎯 Objetivos
-
-- Melhorar a experiência de agendamento dos clientes.
-- Automatizar processos internos.
-- Integrar comunicação via WhatsApp.
-- Implementar programa de fidelidade.
-- Disponibilizar pagamentos online.
-- Gerar relatórios gerenciais.
-- Preparar o sistema para múltiplos profissionais e futuras expansões.
+- Estrutura inicial do projeto React
+- Organização profissional de pastas
+- Configuração de rotas
+- Navbar responsiva (base)
+- Hero Section inicial
+- Footer inicial
+- Definição da identidade visual
+- Planejamento da arquitetura Frontend
+- Planejamento da arquitetura Backend
+- Planejamento do Banco de Dados
 
 ---
 
-## 🚀 Tecnologias
+## 🏗️ Arquitetura do Projeto
 
-### Front-End
+### Frontend
 
 - React
 - JavaScript
-- CSS3
-- React Router DOM
-- Axios
-- React Icons
+- CSS
+- React Router
 
-### Back-End
+### Backend (Planejado)
 
 - Node.js
 - Express
 
-### Banco de Dados
+### Banco de Dados (Planejado)
 
 - PostgreSQL
 
 ---
 
-## ✨ Funcionalidades Planejadas
+## 🎨 Design System
 
-### Site Institucional
+### Cores
 
-- [ ] Home
-- [ ] Sobre
-- [ ] Serviços
-- [ ] Galeria
-- [ ] Avaliações
-- [ ] Contato
-
-### Cliente
-
-- [ ] Cadastro
-- [ ] Login
-- [ ] Recuperação de senha
-- [ ] Perfil
-- [ ] Histórico de serviços
-- [ ] Programa de fidelidade
-- [ ] Avaliações
-
-### Agendamento
-
-- [ ] Escolha de serviço
-- [ ] Escolha de data
-- [ ] Escolha de horário
-- [ ] Confirmação
-- [ ] Pagamento online
-
-### Administração
-
-- [ ] Dashboard
-- [ ] Agenda
-- [ ] Clientes
-- [ ] Serviços
-- [ ] Relatórios
-- [ ] Financeiro
-- [ ] Promoções
-- [ ] Configurações
-
----
-
-## 🎨 Identidade Visual
-
-| Elemento | Cor |
-|-----------|------|
-| Fundo Principal | #0A0A0A |
+| Cor | Hex |
+|------|------|
+| Preto Principal | #0A0A0A |
 | Verde Neon | #39FF14 |
-| Verde Escuro | #00C853 |
-| Texto Principal | #FFFFFF |
+| Verde Escuro | Personalizado |
+| Branco | #FFFFFF |
 
-Estilo visual:
+### Estilo
 
 - Premium
 - Moderno
@@ -112,7 +64,7 @@ Estilo visual:
 
 ---
 
-## 📂 Estrutura Inicial
+## 📂 Estrutura Atual
 
 ```bash
 src/
@@ -128,79 +80,73 @@ src/
 │
 ├── pages/
 │   ├── Home/
-│   ├── Booking/
-│   ├── Dashboard/
 │   ├── Login/
 │   ├── Register/
 │   ├── Profile/
-│   └── Loyalty/
+│   ├── Loyalty/
+│   ├── Dashboard/
+│   └── Booking/
 │
 ├── routes/
 ├── services/
 ├── styles/
-├── utils/
-│
-├── App.jsx
-├── main.jsx
-└── index.css
+└── utils/
 ```
 
 ---
 
-## 🗺️ Roadmap
+## 📋 Roadmap
 
-### Fase 1
+### Home
 
-- [ ] Estrutura do Projeto
-- [ ] Rotas
-- [ ] Tema Global
-- [ ] Layout Base
-
-### Fase 2
-
-- [ ] Home
+- [x] Navbar
+- [x] Hero Section
+- [x] Footer
+- [ ] Sobre
 - [ ] Serviços
 - [ ] Galeria
 - [ ] Avaliações
+- [ ] CTA Final
 
-### Fase 3
+### Cliente
 
-- [ ] Login
 - [ ] Cadastro
+- [ ] Login
 - [ ] Recuperação de Senha
+- [ ] Perfil
+- [ ] Histórico
+- [ ] Fidelidade
 
-### Fase 4
+### Agendamento
 
-- [ ] Sistema de Agendamento
+- [ ] Escolha de Serviço
+- [ ] Escolha de Data
+- [ ] Escolha de Horário
+- [ ] Confirmação
+- [ ] Pagamento
 
-### Fase 5
+### Administrador
 
-- [ ] Perfil do Cliente
-- [ ] Programa de Fidelidade
-
-### Fase 6
-
-- [ ] Dashboard Administrativo
-
-### Fase 7
-
-- [ ] Integração WhatsApp
-
-### Fase 8
-
-- [ ] Pagamentos Online
+- [ ] Dashboard
+- [ ] Agenda
+- [ ] Clientes
+- [ ] Serviços
+- [ ] Relatórios
+- [ ] Financeiro
+- [ ] Promoções
 
 ---
 
-## 📈 Visão do Produto
+## 🎯 Objetivo
 
-A longo prazo, o Onyx Barber Web será uma plataforma completa para gestão de barbearias, contendo:
+Transformar a Onyx Barber em uma plataforma completa de gestão para barbearias, contendo:
 
 - Agendamento Online
 - Fidelização de Clientes
-- Comunicação Automatizada
+- Pagamentos
+- Relatórios
 - Gestão Financeira
-- Relatórios Estratégicos
+- Comunicação Automatizada
 - Múltiplos Profissionais
 - Múltiplas Unidades
 
@@ -210,8 +156,6 @@ A longo prazo, o Onyx Barber Web será uma plataforma completa para gestão de b
 
 **Matheus Büll**
 
-Estudante de Desenvolvimento de Sistemas e apaixonado por tecnologia, experiência do usuário e soluções digitais para pequenos negócios.
+Desenvolvedor Front-End | React Developer | Suporte de TI
 
----
-
-⭐ Projeto em desenvolvimento.
+Projeto desenvolvido para portfólio profissional.

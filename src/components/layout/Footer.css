@@ -1,0 +1,23 @@
+.footer {
+  padding: 50px 0;
+
+  text-align: center;
+
+  border-top: 1px solid #1f1f1f;
+
+  background: #0a0a0a;
+}
+
+.footer h2 {
+  color: #39ff14;
+  margin-bottom: 1rem;
+}
+
+.footer p {
+  color: #b5b5b5;
+  margin-bottom: 1rem;
+}
+
+.footer span {
+  color: #666;
+}
