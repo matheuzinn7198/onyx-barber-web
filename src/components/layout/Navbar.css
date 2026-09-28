@@ -20,6 +20,8 @@
 
 .logo {
   color: white;
+  text-decoration: none;
+
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 4px;
@@ -37,15 +39,15 @@
   gap: 2rem;
 
   list-style: none;
-  color: white;
 }
 
-.menu li {
-  cursor: pointer;
+.menu a {
+  color: white;
+  text-decoration: none;
   transition: 0.3s;
 }
 
-.menu li:hover {
+.menu a:hover {
   color: #39ff14;
 }
 
@@ -59,8 +61,13 @@
   background: transparent;
 
   color: white;
-  cursor: pointer;
+  text-decoration: none;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
   transition: all 0.3s ease;
 }
 
@@ -72,17 +79,14 @@
 /* TABLET */
 
 @media (max-width: 992px) {
-
   .menu {
     gap: 1rem;
   }
-
 }
 
 /* MOBILE */
 
 @media (max-width: 768px) {
-
   .menu {
     display: none;
   }
@@ -90,5 +94,4 @@
   .login-btn {
     display: none;
   }
-
 }

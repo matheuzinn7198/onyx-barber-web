@@ -2,6 +2,7 @@
 
 import "./Navbar.css";
 import { FaUser } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import Container from "./Container";
 
 function Navbar() {
@@ -10,22 +11,46 @@ function Navbar() {
       <Container>
         <nav className="navbar-content">
 
-          <a href="/" className="logo">
-  ONYX
-  <span>BARBER</span>
-</a>
+          <Link to="/" className="logo">
+            ONYX
+            <span>BARBER</span>
+          </Link>
 
           <ul className="menu">
-            <li>Início</li>
-            <li>Serviços</li>
-            <li>Galeria</li>
-            <li>Avaliações</li>
-            <li>Contato</li>
+
+            <li>
+              <Link to="/">Início</Link>
+            </li>
+
+            <li>
+              <Link to="/agendamento">
+                Agendar
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/servicos">
+              Serviços
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/cadastro">
+                Cadastro
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/login">
+                Login
+              </Link>
+            </li>
+
           </ul>
 
-          <button className="login-btn">
+          <Link to="/login" className="login-btn">
             <FaUser />
-          </button>
+          </Link>
 
         </nav>
       </Container>
