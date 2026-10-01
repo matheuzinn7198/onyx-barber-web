@@ -9,6 +9,12 @@ function Booking() {
   const [selectedServices, setSelectedServices] =
     useState([]);
 
+  const [selectedDate, setSelectedDate] =
+  useState("");
+
+  const [selectedTime, setSelectedTime] =
+  useState("");
+
   const services = [
   {
     id: 1,
@@ -48,6 +54,18 @@ function Booking() {
   },
 ];
 
+  const availableTimes = [
+  "08:00",
+  "09:00",
+  "10:00",
+  "11:00",
+  "13:00",
+  "14:00",
+  "15:00",
+  "16:00",
+  "17:00",
+];
+
   const toggleService = (service) => {
   const exists = selectedServices.find(
     (item) => item.id === service.id
@@ -82,6 +100,14 @@ const totalPrice =
   );
 
   console.log(selectedServices);
+
+  const formatDate = (date) => {
+  if (!date) return "";
+
+  const [year, month, day] = date.split("-");
+
+  return `${day}/${month}/${year}`;
+};
 
   return (
     <>
@@ -220,35 +246,171 @@ const totalPrice =
 
         {step === 2 && (
 
-          <div className="booking-content">
+  <div className="booking-content">
 
-            <h2>
-              Escolha uma Data
-            </h2>
+    <h2>Escolha uma Data</h2>
 
-            <p>
-              Próxima etapa do projeto.
-            </p>
+    <input
+      type="date"
+      className="date-input"
+      value={selectedDate}
+      onChange={(e) =>
+        setSelectedDate(e.target.value)
+      }
+    />
 
-            <div className="actions">
+    <div className="actions">
 
-              <button
-                onClick={() =>
-                  setStep(1)
-                }
-              >
-                Voltar
-              </button>
+      <button
+        onClick={() => setStep(1)}
+      >
+        Voltar
+      </button>
 
-              <button>
-                Próximo
-              </button>
+      <button
+        disabled={!selectedDate}
+        onClick={() => setStep(3)}
+      >
+        Próximo
+      </button>
 
-            </div>
+    </div>
 
-          </div>
+  </div>
 
-        )}
+)}
+
+  {step === 3 && (
+
+  <div className="booking-content">
+
+    <h2>Escolha um Horário</h2>
+
+    <div className="times-grid">
+
+      {availableTimes.map((time) => (
+
+        <button
+          key={time}
+          className={
+            selectedTime === time
+              ? "time-btn selected"
+              : "time-btn"
+          }
+          onClick={() =>
+            setSelectedTime(time)
+          }
+        >
+          {time}
+        </button>
+
+      ))}
+
+    </div>
+
+    <div className="actions">
+
+      <button
+        onClick={() =>
+          setStep(2)
+        }
+      >
+        Voltar
+      </button>
+
+      <button
+        disabled={!selectedTime}
+        onClick={() =>
+          setStep(4)
+        }
+      >
+        Próximo
+      </button>
+
+    </div>
+
+  </div>
+
+)}
+
+  {step === 4 && (
+
+  <div className="booking-content">
+
+    <h2>Confirmar Agendamento</h2>
+
+    <div className="confirmation-box">
+
+      <h3>
+        Serviços Selecionados ({selectedServices.length})
+      </h3>
+
+      <ul>
+
+        {selectedServices.map((service) => (
+
+          <li key={service.id}>
+            {service.name}
+            {" - "}
+            {service.duration} min
+          </li>
+
+        ))}
+
+      </ul>
+
+      <hr />
+
+      <p>
+        <strong>Data:</strong>
+        {" "}
+        {formatDate(selectedDate)}
+      </p>
+
+      <p>
+        <strong>Horário:</strong>
+        {" "}
+        {selectedTime}
+      </p>
+
+      <p>
+        <strong>Tempo Total:</strong>
+        {" "}
+        {totalDuration} min
+      </p>
+
+      <p>
+        <strong>Valor Total:</strong>
+        {" "}
+        R$ {totalPrice.toFixed(2)}
+      </p>
+
+    </div>
+
+    <div className="actions">
+
+      <button
+        onClick={() =>
+          setStep(3)
+        }
+      >
+        Voltar
+      </button>
+
+      <button
+        className="confirm-btn"
+        onClick={() =>
+          alert("Agendamento confirmado!")
+        }
+      >
+        Confirmar Agendamento
+      </button>
+
+    </div>
+
+  </div>
+
+)}
 
       </section>
 
