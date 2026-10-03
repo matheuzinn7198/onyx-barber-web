@@ -15,6 +15,12 @@ function Booking() {
   const [selectedTime, setSelectedTime] =
   useState("");
 
+  const [bookingType, setBookingType] =
+  useState("");
+
+  const [showAccountModal, setShowAccountModal] =
+  useState(true);
+
   const services = [
   {
     id: 1,
@@ -158,6 +164,16 @@ const totalPrice =
           >
             Confirmar
           </span>
+
+            <span
+  className={
+    step === 5
+      ? "step active"
+      : "step"
+  }
+>
+  Identificação
+</span>
 
         </div>
 
@@ -398,13 +414,67 @@ const totalPrice =
       </button>
 
       <button
-        className="confirm-btn"
-        onClick={() =>
-          alert("Agendamento confirmado!")
-        }
-      >
-        Confirmar Agendamento
-      </button>
+  className="confirm-btn"
+  onClick={() => {
+    console.log("Modal aberto");
+    setShowAccountModal(true);
+  }}
+>
+  Confirmar Agendamento
+</button>
+
+    </div>
+
+  </div>
+
+)}
+
+  {showAccountModal && (
+
+  <div className="modal-overlay">
+
+    <div className="account-modal">
+
+      <div className="modal-logo">
+        💈
+      </div>
+
+      <h2>
+        Faça parte da Onyx Barber
+      </h2>
+
+      <p>
+        Crie sua conta gratuitamente
+        e aproveite benefícios exclusivos.
+      </p>
+
+      <div className="modal-benefits">
+
+        <span>✓ Programa Fidelidade</span>
+        <span>✓ Histórico de Serviços</span>
+        <span>✓ Promoções Exclusivas</span>
+        <span>✓ Reagendamento Rápido</span>
+
+      </div>
+
+      <div className="modal-actions">
+
+        <button
+          className="create-account-btn"
+        >
+          Criar Conta
+        </button>
+
+        <button
+          className="guest-modal-btn"
+          onClick={() =>
+            setShowAccountModal(false)
+          }
+        >
+          Continuar como Convidado
+        </button>
+
+      </div>
 
     </div>
 

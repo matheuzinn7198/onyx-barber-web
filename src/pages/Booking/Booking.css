@@ -307,3 +307,320 @@
 .confirm-btn:hover {
   opacity: 0.9;
 }
+
+.identification-subtitle {
+  margin-top: 10px;
+  color: #bdbdbd;
+}
+
+.identification-options {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  margin: 30px 0;
+}
+
+.option-btn,
+.guest-btn {
+  padding: 15px 25px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+.option-btn {
+  background: #111;
+
+  color: white;
+
+  border: 1px solid #333;
+}
+
+.option-btn:hover {
+  border-color: #39ff14;
+}
+
+.guest-btn {
+  background: #39ff14;
+
+  color: #0a0a0a;
+
+  border: none;
+}
+
+.benefits-box {
+  margin-top: 30px;
+
+  padding: 25px;
+
+  background: #111;
+
+  border: 1px solid #39ff14;
+
+  border-radius: 12px;
+
+  text-align: left;
+}
+
+.benefits-box h3 {
+  margin-bottom: 15px;
+
+  color: #39ff14;
+}
+
+.benefits-box ul {
+  list-style: none;
+
+  padding: 0;
+}
+
+.benefits-box li {
+  margin-bottom: 10px;
+}
+
+.guest-message {
+  margin-top: 25px;
+
+  padding: 20px;
+
+  border: 1px solid #333;
+
+  border-radius: 12px;
+
+  background: #0f0f0f;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(0, 0, 0, 0.75);
+
+  backdrop-filter: blur(12px);
+
+  z-index: 9999;
+
+  animation: fadeOverlay 0.3s ease;
+}
+
+.account-modal {
+  width: 90%;
+  max-width: 600px;
+
+  background: linear-gradient(
+    180deg,
+    #111 0%,
+    #0a0a0a 100%
+  );
+
+  border: 1px solid rgba(57, 255, 20, 0.3);
+
+  border-radius: 24px;
+
+  padding: 40px;
+
+  text-align: center;
+
+  box-shadow:
+    0 0 40px rgba(57, 255, 20, 0.15),
+    0 20px 60px rgba(0, 0, 0, 0.6);
+
+  animation: dropModal 0.5s ease;
+}
+
+@keyframes dropModal {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(-80px)
+      scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+.create-account-btn {
+  background: #39ff14;
+
+  color: #0a0a0a;
+
+  border: none;
+
+  padding: 15px 30px;
+
+  border-radius: 8px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.guest-modal-btn {
+  background: transparent;
+
+  color: white;
+
+  border: 1px solid #333;
+
+  padding: 15px 30px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+.modal-logo {
+  width: 80px;
+  height: 80px;
+
+  margin: 0 auto 20px;
+
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 2rem;
+
+  background: rgba(57, 255, 20, 0.1);
+
+  border: 1px solid rgba(57, 255, 20, 0.3);
+
+  color: #39ff14;
+}
+
+.account-modal p {
+  color: #bdbdbd;
+
+  line-height: 1.6;
+
+  margin-bottom: 25px;
+}
+
+.modal-benefits {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+
+  margin: 30px 0;
+
+  text-align: left;
+}
+
+.modal-benefits span {
+  padding: 12px 15px;
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  color: white;
+}
+
+.modal-actions {
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+
+  margin-top: 30px;
+}
+
+.create-account-btn {
+  background: #39ff14;
+
+  color: #0a0a0a;
+
+  border: none;
+
+  padding: 15px;
+
+  border-radius: 12px;
+
+  font-size: 1rem;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.create-account-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 0 20px rgba(57, 255, 20, 0.4);
+}
+
+.guest-modal-btn {
+  background: transparent;
+
+  color: #bdbdbd;
+
+  border: 1px solid #333;
+
+  padding: 15px;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.guest-modal-btn:hover {
+  border-color: #666;
+}
+
+@keyframes fadeOverlay {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes dropModal {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(-80px)
+      scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}

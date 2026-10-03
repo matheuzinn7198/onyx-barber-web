@@ -3,36 +3,36 @@ import Footer from "../../components/layout/Footer";
 import "./Services.css";
 
 function Services() {
-  const services = [
+  const gallery = [
     {
       id: 1,
-      name: "Corte Masculino",
-      duration: "45 min",
+      title: "Corte Masculino",
+      category: "Corte",
     },
     {
       id: 2,
-      name: "Barba",
-      duration: "30 min",
+      title: "Barba",
+      category: "Barba",
     },
     {
       id: 3,
-      name: "Limpeza de Pele",
-      duration: "60 min",
+      title: "Limpeza de Pele",
+      category: "Estética",
     },
     {
       id: 4,
-      name: "Hidratação",
-      duration: "40 min",
+      title: "Hidratação",
+      category: "Tratamento",
     },
     {
       id: 5,
-      name: "Tintura",
-      duration: "90 min",
+      title: "Tintura",
+      category: "Coloração",
     },
     {
       id: 6,
-      name: "Depilação Nariz/Ouvido",
-      duration: "20 min",
+      title: "Depilação Nariz/Ouvido",
+      category: "Estética",
     },
   ];
 
@@ -43,30 +43,56 @@ function Services() {
       <section className="services-page">
 
         <div className="services-header">
-          <h1>Nossos Serviços</h1>
+
+          <h1>Nossos Trabalhos</h1>
 
           <p>
-            Escolha o serviço ideal para você.
+            Conheça alguns dos serviços e
+            resultados realizados pela
+            Onyx Barber.
           </p>
+
         </div>
 
-        <div className="services-grid">
+        <div className="gallery-filters">
 
-          {services.map((service) => (
+          <button>Todos</button>
+
+          <button>Cortes</button>
+
+          <button>Barba</button>
+
+          <button>Estética</button>
+
+          <button>Tratamentos</button>
+
+        </div>
+
+        <div className="gallery-grid">
+
+          {gallery.map((item) => (
+
             <div
-              key={service.id}
-              className="service-card"
+              key={item.id}
+              className="gallery-card"
             >
-              <h3>{service.name}</h3>
 
-              <span>
-                Duração: {service.duration}
-              </span>
+              <div className="gallery-placeholder">
 
-              <button>
-                Agendar
-              </button>
+                <span>📷</span>
+
+              </div>
+
+              <div className="gallery-info">
+
+                <h3>{item.title}</h3>
+
+                <p>{item.category}</p>
+
+              </div>
+
             </div>
+
           ))}
 
         </div>
@@ -78,4 +104,4 @@ function Services() {
   );
 }
 
-export default Services; 
+export default Services;
