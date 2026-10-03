@@ -8,6 +8,8 @@ import Profile from "../pages/Profile/Profile";
 import Loyalty from "../pages/Loyalty/Loyalty";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import Services from "../pages/Services/Services";
+import ForgotPassword from "../pages/ForgotPassword/ForgotPassword";
+import ForgotPasswordSuccess from "../pages/ForgotPasswordSuccess/ForgotPasswordSuccess";
 
 function AppRoutes() {
   return (
@@ -29,6 +31,10 @@ function AppRoutes() {
         <Route path="/dashboard" element={<Dashboard />} />
 
         <Route path="/servicos" element={<Services />} />
+
+        <Route path="/recuperar-senha" element={<ForgotPassword />} />
+
+        <Route path="/email-enviado" element={<ForgotPasswordSuccess />} />
 
       </Routes>
     </BrowserRouter>

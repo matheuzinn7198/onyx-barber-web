@@ -91,9 +91,10 @@ function Login() {
               <button
   type="button"
   className="forgot-password"
-  onClick={() =>
-    navigate("/recuperar-senha")
-  }
+  onClick={() => {
+    console.log("Cliquei");
+    navigate("/recuperar-senha");
+  }}
 >
   Esqueci minha senha
 </button>
