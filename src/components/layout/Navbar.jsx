@@ -23,12 +23,6 @@ function Navbar() {
             </li>
 
             <li>
-              <Link to="/agendamento">
-                Agendar
-              </Link>
-            </li>
-
-            <li>
               <Link to="/servicos">
               Serviços
               </Link>

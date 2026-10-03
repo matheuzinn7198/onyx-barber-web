@@ -15,11 +15,8 @@ function Booking() {
   const [selectedTime, setSelectedTime] =
   useState("");
 
-  const [bookingType, setBookingType] =
-  useState("");
-
   const [showAccountModal, setShowAccountModal] =
-  useState(true);
+  useState(false);
 
   const services = [
   {
@@ -164,16 +161,6 @@ const totalPrice =
           >
             Confirmar
           </span>
-
-            <span
-  className={
-    step === 5
-      ? "step active"
-      : "step"
-  }
->
-  Identificação
-</span>
 
         </div>
 
@@ -436,17 +423,19 @@ const totalPrice =
     <div className="account-modal">
 
       <div className="modal-logo">
-        💈
-      </div>
+  💈
+</div>
 
-      <h2>
-        Faça parte da Onyx Barber
-      </h2>
+<h2>
+  Seu horário está quase confirmado
+</h2>
 
-      <p>
-        Crie sua conta gratuitamente
-        e aproveite benefícios exclusivos.
-      </p>
+<p>
+  Crie uma conta gratuitamente
+  para acompanhar seus agendamentos,
+  acumular benefícios e reagendar
+  com mais facilidade.
+</p>
 
       <div className="modal-benefits">
 
@@ -459,20 +448,21 @@ const totalPrice =
 
       <div className="modal-actions">
 
-        <button
-          className="create-account-btn"
-        >
-          Criar Conta
-        </button>
+  <button
+    className="create-account-btn"
+  >
+    Criar Conta e Finalizar
+  </button>
 
-        <button
-          className="guest-modal-btn"
-          onClick={() =>
-            setShowAccountModal(false)
-          }
-        >
-          Continuar como Convidado
-        </button>
+  <button
+    className="guest-modal-btn"
+    onClick={() =>
+      setShowAccountModal(false)
+    }
+  >
+    Finalizar como Convidado
+  </button>
+
 
       </div>
 

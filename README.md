@@ -1,8 +1,8 @@
 # 🚀 Onyx Barber System
 
-Sistema web profissional para gerenciamento de barbearias.
+Sistema web para gerenciamento e agendamento de serviços da **Onyx Barber**.
 
-Projeto desenvolvido com foco em escalabilidade, experiência do usuário e arquitetura preparada para crescimento futuro.
+Projeto desenvolvido com foco em praticidade, experiência do usuário, responsividade e uma arquitetura preparada para futuras expansões.
 
 ---
 
@@ -11,15 +11,42 @@ Projeto desenvolvido com foco em escalabilidade, experiência do usuário e arqu
 ### ✅ Concluído
 
 - Estrutura inicial do projeto React
-- Organização profissional de pastas
+- Organização de pastas
 - Configuração de rotas
-- Navbar responsiva (base)
-- Hero Section inicial
-- Footer inicial
-- Definição da identidade visual
-- Planejamento da arquitetura Frontend
+- React Router
+- Navbar responsiva
+- Footer
+- Hero Section
+- Identidade visual
+- Estrutura da página Home
+- Estrutura da página Trabalhos
+- Estrutura inicial da página de Avaliações
+- Fluxo de agendamento
+- Seleção de múltiplos serviços
+- Cálculo de duração dos serviços
+- Cálculo de valor dos serviços
+- Seleção de data
+- Seleção de horário
+- Tela de confirmação do agendamento
+- Modal de criação de conta ou convidado
+- Página de Login
+- Página de Cadastro
+- Máscara de telefone
+- Botão de login com Google preparado para integração futura
+- Organização inicial dos assets
 - Planejamento da arquitetura Backend
 - Planejamento do Banco de Dados
+
+### 🚧 Em Desenvolvimento
+
+- Recuperação de senha
+- Página de Trabalhos com fotos e vídeos
+- Sistema de Avaliações
+- Área do Cliente
+- Histórico de serviços
+- Programa de fidelidade
+- Melhorias de responsividade
+- Melhorias de UX/UI
 
 ---
 
@@ -30,14 +57,18 @@ Projeto desenvolvido com foco em escalabilidade, experiência do usuário e arqu
 - React
 - JavaScript
 - CSS
-- React Router
+- React Router DOM
 
-### Backend (Planejado)
+### Backend
+
+**Planejado**
 
 - Node.js
 - Express
 
-### Banco de Dados (Planejado)
+### Banco de Dados
+
+**Planejado**
 
 - PostgreSQL
 
@@ -49,18 +80,19 @@ Projeto desenvolvido com foco em escalabilidade, experiência do usuário e arqu
 
 | Cor | Hex |
 |------|------|
-| Preto Principal | #0A0A0A |
-| Verde Neon | #39FF14 |
+| Preto Principal | `#0A0A0A` |
+| Verde Neon | `#39FF14` |
 | Verde Escuro | Personalizado |
-| Branco | #FFFFFF |
+| Branco | `#FFFFFF` |
 
 ### Estilo
 
-- Premium
 - Moderno
-- Elegante
+- Funcional
 - Responsivo
-- Mobile First
+- Intuitivo
+- Focado na experiência do usuário
+- Mobile Friendly
 
 ---
 
@@ -70,92 +102,27 @@ Projeto desenvolvido com foco em escalabilidade, experiência do usuário e arqu
 src/
 │
 ├── assets/
-├── components/
-│   ├── forms/
-│   ├── layout/
-│   └── ui/
+│   ├── icons/
+│   │   └── google-icon.png
+│   └── images/
 │
-├── context/
-├── hooks/
+├── components/
+│   ├── layout/
+│   │   ├── Navbar.jsx
+│   │   ├── Footer.jsx
+│   │   └── Container.jsx
+│   │
+│   └── ui/
 │
 ├── pages/
 │   ├── Home/
+│   ├── Services/
+│   ├── Booking/
 │   ├── Login/
 │   ├── Register/
-│   ├── Profile/
-│   ├── Loyalty/
-│   ├── Dashboard/
-│   └── Booking/
+│   └── ForgotPassword/
 │
 ├── routes/
-├── services/
-├── styles/
-└── utils/
-```
-
----
-
-## 📋 Roadmap
-
-### Home
-
-- [x] Navbar
-- [x] Hero Section
-- [x] Footer
-- [ ] Sobre
-- [ ] Serviços
-- [ ] Galeria
-- [ ] Avaliações
-- [ ] CTA Final
-
-### Cliente
-
-- [ ] Cadastro
-- [ ] Login
-- [ ] Recuperação de Senha
-- [ ] Perfil
-- [ ] Histórico
-- [ ] Fidelidade
-
-### Agendamento
-
-- [ ] Escolha de Serviço
-- [ ] Escolha de Data
-- [ ] Escolha de Horário
-- [ ] Confirmação
-- [ ] Pagamento
-
-### Administrador
-
-- [ ] Dashboard
-- [ ] Agenda
-- [ ] Clientes
-- [ ] Serviços
-- [ ] Relatórios
-- [ ] Financeiro
-- [ ] Promoções
-
----
-
-## 🎯 Objetivo
-
-Transformar a Onyx Barber em uma plataforma completa de gestão para barbearias, contendo:
-
-- Agendamento Online
-- Fidelização de Clientes
-- Pagamentos
-- Relatórios
-- Gestão Financeira
-- Comunicação Automatizada
-- Múltiplos Profissionais
-- Múltiplas Unidades
-
----
-
-## 👨‍💻 Desenvolvedor
-
-**Matheus Büll**
-
-Desenvolvedor Front-End | React Developer | Suporte de TI
-
-Projeto desenvolvido para portfólio profissional.
+│   └── AppRoutes.jsx
+│
+└── App.jsx

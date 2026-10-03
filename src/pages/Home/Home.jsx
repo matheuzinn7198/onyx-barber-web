@@ -1,10 +1,14 @@
 // src/pages/Home/Home.jsx
 
+import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/layout/Navbar";
 import Footer from "../../components/layout/Footer";
 import "./Home.css";
 
 function Home() {
+
+  const navigate = useNavigate();
+
   return (
     <>
       <Navbar />
@@ -22,9 +26,14 @@ function Home() {
           estética e atendimento premium.
         </p>
 
-        <button>
-          AGENDAR HORÁRIO
-        </button>
+       <button
+  className="hero-btn"
+  onClick={() =>
+    navigate("/agendamento")
+  }
+>
+  AGENDAR HORÁRIO
+</button>
 
       </section>
 
