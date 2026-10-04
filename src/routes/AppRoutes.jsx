@@ -10,6 +10,9 @@ import Dashboard from "../pages/Dashboard/Dashboard";
 import Services from "../pages/Services/Services";
 import ForgotPassword from "../pages/ForgotPassword/ForgotPassword";
 import ForgotPasswordSuccess from "../pages/ForgotPasswordSuccess/ForgotPasswordSuccess";
+import ResetPassword from "../pages/ResetPassword/ResetPassword";
+import PasswordSuccess from "../pages/PasswordSuccess/PasswordSuccess";
+import History from "../pages/History/History";
 
 function AppRoutes() {
   return (
@@ -35,6 +38,14 @@ function AppRoutes() {
         <Route path="/recuperar-senha" element={<ForgotPassword />} />
 
         <Route path="/email-enviado" element={<ForgotPasswordSuccess />} />
+        
+        <Route path="/reset-password" element={<ResetPassword />} />
+
+        <Route path="/password-success" element={<PasswordSuccess />} />
+
+        <Route path="/history" element={<History />} />
+
+        <Route path="/loyalty" element={<Loyalty />} />
 
       </Routes>
     </BrowserRouter>

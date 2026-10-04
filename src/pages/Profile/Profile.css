@@ -1,14 +1,16 @@
-.reset-page {
+.profile-page {
   min-height: 80vh;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   padding: 40px 20px;
 }
 
-.reset-card {
+.profile-card {
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
 
   background: #111;
 
@@ -17,16 +19,36 @@
   border-radius: 16px;
 
   padding: 40px;
-
-  text-align: center;
 }
 
-.reset-card h1 {
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+
+  margin: 0 auto 20px;
+
+  border-radius: 50%;
+
+  background: #39ff14;
+
+  color: black;
+
+  font-size: 32px;
+  font-weight: bold;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-card h1 {
+  text-align: center;
   color: #39ff14;
   margin-bottom: 10px;
 }
 
-.reset-card p {
+.profile-card p {
+  text-align: center;
   color: #ccc;
   margin-bottom: 30px;
 }
@@ -34,8 +56,6 @@
 .input-group {
   display: flex;
   flex-direction: column;
-
-  text-align: left;
 
   margin-bottom: 20px;
 }
@@ -62,17 +82,7 @@
   border-color: #39ff14;
 }
 
-.checkbox-group {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  margin-bottom: 25px;
-
-  color: white;
-}
-
-button {
+.profile-card button {
   width: 100%;
 
   padding: 14px;
@@ -92,13 +102,6 @@ button {
   transition: 0.3s;
 }
 
-button:hover {
+.profile-card button:hover {
   transform: translateY(-2px);
-}
-
-.back-link {
-  display: inline-block;
-  margin-top: 20px;
-  color: #39ff14;
-  text-decoration: none;
 }

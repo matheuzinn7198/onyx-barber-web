@@ -1,0 +1,66 @@
+.history-page {
+  min-height: 80vh;
+  padding: 40px 20px;
+}
+
+.history-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.history-container h1 {
+  text-align: center;
+  color: #39ff14;
+  margin-bottom: 10px;
+}
+
+.history-container p {
+  text-align: center;
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+.history-list {
+  display: grid;
+  gap: 20px;
+}
+
+.history-card {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.history-card h3 {
+  color: white;
+  margin-bottom: 15px;
+}
+
+.history-card p {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.status {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.status.concluído {
+  background: rgba(57, 255, 20, 0.15);
+  color: #39ff14;
+}
+
+.status.agendado {
+  background: rgba(0, 150, 255, 0.15);
+  color: #4da6ff;
+}
+
+.status.cancelado {
+  background: rgba(255, 0, 0, 0.15);
+  color: #ff4d4d;
+}
