@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/layout/Navbar";
 import Footer from "../../components/layout/Footer";
 import "./Booking.css";
 
 function Booking() {
+  const navigate = useNavigate();
   const [step, setStep] = useState(1);
 
   const [selectedServices, setSelectedServices] =
@@ -449,16 +451,18 @@ const totalPrice =
       <div className="modal-actions">
 
   <button
-    className="create-account-btn"
-  >
-    Criar Conta e Finalizar
-  </button>
+  className="create-account-btn"
+  onClick={() => navigate("/cadastro")}
+>
+  Criar Conta e Finalizar
+</button>
 
   <button
     className="guest-modal-btn"
-    onClick={() =>
-      setShowAccountModal(false)
-    }
+    onClick={() => {
+      setShowAccountModal(false);
+      navigate("/booking-success");
+    }}
   >
     Finalizar como Convidado
   </button>

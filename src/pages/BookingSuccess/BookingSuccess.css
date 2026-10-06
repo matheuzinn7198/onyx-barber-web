@@ -1,0 +1,91 @@
+.booking-success-page {
+  min-height: 80vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px 20px;
+}
+
+.booking-success-card {
+  width: 100%;
+  max-width: 600px;
+
+  background: #111;
+
+  border: 1px solid #222;
+
+  border-radius: 16px;
+
+  padding: 40px;
+
+  text-align: center;
+}
+
+.success-icon {
+  width: 100px;
+  height: 100px;
+
+  margin: 0 auto 25px;
+
+  border-radius: 50%;
+
+  background: #39ff14;
+
+  color: black;
+
+  font-size: 40px;
+  font-weight: bold;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.booking-success-card h1 {
+  color: #39ff14;
+  margin-bottom: 15px;
+}
+
+.booking-success-card p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.success-buttons {
+  display: flex;
+  gap: 15px;
+
+  margin-top: 30px;
+}
+
+.success-buttons button {
+  flex: 1;
+
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.whatsapp-btn {
+  background: #25d366;
+  color: white;
+}
+
+.home-btn {
+  background: #39ff14;
+  color: black;
+}
+
+.success-buttons button:hover {
+  transform: translateY(-2px);
+}

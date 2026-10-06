@@ -13,6 +13,7 @@ import ForgotPasswordSuccess from "../pages/ForgotPasswordSuccess/ForgotPassword
 import ResetPassword from "../pages/ResetPassword/ResetPassword";
 import PasswordSuccess from "../pages/PasswordSuccess/PasswordSuccess";
 import History from "../pages/History/History";
+import BookingSuccess from "../pages/BookingSuccess/BookingSuccess";
 
 function AppRoutes() {
   return (
@@ -46,6 +47,8 @@ function AppRoutes() {
         <Route path="/history" element={<History />} />
 
         <Route path="/loyalty" element={<Loyalty />} />
+
+        <Route path="/booking-success" element={<BookingSuccess />} />
 
       </Routes>
     </BrowserRouter>
