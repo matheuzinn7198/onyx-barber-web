@@ -14,6 +14,7 @@ import ResetPassword from "../pages/ResetPassword/ResetPassword";
 import PasswordSuccess from "../pages/PasswordSuccess/PasswordSuccess";
 import History from "../pages/History/History";
 import BookingSuccess from "../pages/BookingSuccess/BookingSuccess";
+import AdminAppointments from "../pages/AdminAppointments/AdminAppointments";
 
 function AppRoutes() {
   return (
@@ -49,6 +50,8 @@ function AppRoutes() {
         <Route path="/loyalty" element={<Loyalty />} />
 
         <Route path="/booking-success" element={<BookingSuccess />} />
+
+        <Route path="/admin-appointments" element={<AdminAppointments />} />
 
       </Routes>
     </BrowserRouter>

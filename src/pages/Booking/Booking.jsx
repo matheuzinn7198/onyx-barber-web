@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/layout/Navbar";
 import Footer from "../../components/layout/Footer";
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
 import "./Booking.css";
 
 function Booking() {
@@ -12,7 +14,7 @@ function Booking() {
     useState([]);
 
   const [selectedDate, setSelectedDate] =
-  useState("");
+useState(new Date());
 
   const [selectedTime, setSelectedTime] =
   useState("");
@@ -109,9 +111,7 @@ const totalPrice =
   const formatDate = (date) => {
   if (!date) return "";
 
-  const [year, month, day] = date.split("-");
-
-  return `${day}/${month}/${year}`;
+  return date.toLocaleDateString("pt-BR");
 };
 
   return (
@@ -255,14 +255,13 @@ const totalPrice =
 
     <h2>Escolha uma Data</h2>
 
-    <input
-      type="date"
-      className="date-input"
-      value={selectedDate}
-      onChange={(e) =>
-        setSelectedDate(e.target.value)
-      }
-    />
+    <Calendar
+  minDate={new Date()}
+  onChange={(value) => {
+  setSelectedDate(value);
+}}
+  value={selectedDate}
+/>
 
     <div className="actions">
 

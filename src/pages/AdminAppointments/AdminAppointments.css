@@ -1,0 +1,539 @@
+.admin-appointments-page {
+  min-height: 100vh;
+  padding-top: 120px;
+  padding-bottom: 60px;
+  background: #0a0a0a;
+  color: #fff;
+}
+
+.admin-appointments-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+
+.admin-appointments-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.admin-appointments-header h1 {
+  margin: 0 0 8px;
+  color: #39ff14;
+  font-size: 2rem;
+}
+
+.admin-appointments-header p {
+  margin: 0;
+  color: #aaa;
+}
+
+.back-dashboard-button {
+  padding: 12px 20px;
+  border: 1px solid #39ff14;
+  border-radius: 10px;
+  background: transparent;
+  color: #39ff14;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.back-dashboard-button:hover {
+  background: #39ff14;
+  color: #000;
+}
+
+/* FILTROS */
+
+.appointments-filters {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.search-box {
+  flex: 1;
+}
+
+.search-box input,
+.status-filter select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 16px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  background: #151515;
+  color: #fff;
+  outline: none;
+}
+
+.search-box input:focus,
+.status-filter select:focus {
+  border-color: #39ff14;
+}
+
+.status-filter {
+  width: 220px;
+}
+
+.status-filter select {
+  cursor: pointer;
+}
+
+/* LISTA */
+
+.appointments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.admin-appointment-card {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  align-items: center;
+  gap: 20px;
+
+  padding: 22px;
+
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 14px;
+
+  transition: 0.3s;
+}
+
+.admin-appointment-card:hover {
+  border-color: #39ff14;
+  transform: translateY(-2px);
+}
+
+/* DATA / HORÁRIO */
+
+.appointment-main-info {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.appointment-date {
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+}
+
+.appointment-date strong {
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.appointment-date span {
+  margin-top: 5px;
+  color: #39ff14;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* CLIENTE */
+
+.appointment-client h3 {
+  margin: 0 0 5px;
+  font-size: 1rem;
+}
+
+.appointment-client p {
+  margin: 0;
+  color: #aaa;
+}
+
+/* PREÇO */
+
+.appointment-price strong {
+  color: #39ff14;
+  font-size: 1rem;
+}
+
+/* STATUS */
+
+.admin-status {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.admin-status.pendente {
+  background: #ffc107;
+  color: #000;
+}
+
+.admin-status.confirmado {
+  background: #0d6efd;
+  color: #fff;
+}
+
+.admin-status.concluido {
+  background: #198754;
+  color: #fff;
+}
+
+.admin-status.cancelado {
+  background: #dc3545;
+  color: #fff;
+}
+
+/* AÇÕES */
+
+.appointment-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.appointment-actions button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.confirm-button {
+  background: #39ff14;
+  color: #000;
+}
+
+.complete-button {
+  background: #198754;
+  color: #fff;
+}
+
+.cancel-button {
+  background: #dc3545;
+  color: #fff;
+}
+
+.appointment-actions button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* VAZIO */
+
+.empty-appointments {
+  padding: 60px 20px;
+  text-align: center;
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 14px;
+}
+
+.empty-appointments h2 {
+  margin-bottom: 10px;
+}
+
+.empty-appointments p {
+  margin: 0;
+  color: #aaa;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+  .admin-appointment-card {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .appointment-main-info {
+    grid-column: 1 / -1;
+  }
+
+  .appointment-actions {
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 600px) {
+  .admin-appointments-page {
+    padding-top: 100px;
+  }
+
+  .admin-appointments-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .admin-appointments-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .back-dashboard-button {
+    width: 100%;
+  }
+
+  .appointments-filters {
+    flex-direction: column;
+  }
+
+  .status-filter {
+    width: 100%;
+  }
+
+  .admin-appointment-card {
+    grid-template-columns: 1fr;
+  }
+
+  .appointment-main-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .appointment-actions {
+    justify-content: flex-start;
+  }
+
+  .appointment-actions button {
+    flex: 1;
+  }
+}
+
+.undo-button {
+  background: #39ff14;
+  color: #000;
+}
+
+.undo-button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* =========================================
+   MODAL DE CONFIRMAÇÃO
+========================================= */
+
+.confirmation-overlay {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(0, 0, 0, 0.78);
+
+  backdrop-filter: blur(6px);
+
+  z-index: 9999;
+}
+
+.confirmation-modal {
+  width: 100%;
+  max-width: 500px;
+
+  padding: 32px;
+
+  background: #111;
+
+  border: 1px solid #2a2a2a;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.7);
+
+  text-align: center;
+
+  animation: modalAppear 0.2s ease;
+}
+
+@keyframes modalAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* ÍCONE */
+
+.confirmation-icon {
+  width: 55px;
+  height: 55px;
+
+  margin: 0 auto 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid #39ff14;
+
+  border-radius: 50%;
+
+  color: #39ff14;
+
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.confirmation-modal h2 {
+  margin: 0 0 10px;
+
+  color: #fff;
+
+  font-size: 1.4rem;
+}
+
+.confirmation-message {
+  margin: 0 auto 25px;
+
+  color: #aaa;
+
+  line-height: 1.5;
+}
+
+/* DADOS DO AGENDAMENTO */
+
+.confirmation-appointment {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px;
+
+  margin-bottom: 25px;
+
+  padding: 18px;
+
+  background: #181818;
+
+  border: 1px solid #292929;
+
+  border-radius: 12px;
+
+  text-align: left;
+}
+
+.confirmation-appointment div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.confirmation-appointment span {
+  color: #777;
+
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.confirmation-appointment strong {
+  color: #fff;
+
+  font-size: 0.9rem;
+}
+
+/* BOTÕES */
+
+.confirmation-actions {
+  display: flex;
+
+  gap: 12px;
+}
+
+.confirmation-actions button {
+  flex: 1;
+
+  padding: 13px 16px;
+
+  border-radius: 10px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.modal-back-button {
+  border: 1px solid #444;
+
+  background: transparent;
+
+  color: #fff;
+}
+
+.modal-back-button:hover {
+  background: #222;
+}
+
+.modal-confirm-button,
+.modal-complete-button,
+.modal-undo-button {
+  border: none;
+
+  background: #39ff14;
+
+  color: #000;
+}
+
+.modal-cancel-button {
+  border: none;
+
+  background: #dc3545;
+
+  color: #fff;
+}
+
+.modal-confirm-button:hover,
+.modal-complete-button:hover,
+.modal-undo-button:hover {
+  background: #2fd611;
+
+  transform: translateY(-2px);
+}
+
+.modal-cancel-button:hover {
+  background: #bb2d3b;
+
+  transform: translateY(-2px);
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 600px) {
+
+  .confirmation-modal {
+    padding: 25px 20px;
+  }
+
+  .confirmation-appointment {
+    grid-template-columns: 1fr;
+  }
+
+  .confirmation-actions {
+    flex-direction: column;
+  }
+
+  .confirmation-actions button {
+    width: 100%;
+  }
+
+}
