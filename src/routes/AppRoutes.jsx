@@ -15,6 +15,8 @@ import PasswordSuccess from "../pages/PasswordSuccess/PasswordSuccess";
 import History from "../pages/History/History";
 import BookingSuccess from "../pages/BookingSuccess/BookingSuccess";
 import AdminAppointments from "../pages/AdminAppointments/AdminAppointments";
+import AdminSchedule from "../pages/AdminSchedule/AdminSchedule";
+import AdminBlocks from "../pages/AdminBlocks/AdminBlocks";
 
 function AppRoutes() {
   return (
@@ -52,6 +54,10 @@ function AppRoutes() {
         <Route path="/booking-success" element={<BookingSuccess />} />
 
         <Route path="/admin-appointments" element={<AdminAppointments />} />
+
+        <Route path="/admin-schedule" element={<AdminSchedule />} />
+
+        <Route path="/admin-blocks" element={<AdminBlocks />} />
 
       </Routes>
     </BrowserRouter>

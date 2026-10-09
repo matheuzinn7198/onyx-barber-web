@@ -93,9 +93,13 @@ function Dashboard() {
                 Agendamentos
               </button>
 
-              <button>
-                Horários
-              </button>
+              <button
+  onClick={() =>
+    navigate("/admin-schedule")
+  }
+>
+  Horários
+</button>
 
               <button>
                 Serviços
