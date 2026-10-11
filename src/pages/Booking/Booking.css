@@ -626,3 +626,25 @@
 .react-calendar__tile--now {
   background: #f0f0f0;
 }
+
+/* Datas indisponíveis */
+.booking-page .react-calendar__tile.booking-date-unavailable:disabled {
+  background: #351414 !important;
+  color: #ff6b6b !important;
+  opacity: 1 !important;
+  cursor: not-allowed !important;
+  border-radius: 6px;
+}
+
+/* Efeito ao passar o mouse */
+.booking-page
+  .react-calendar__tile.booking-date-unavailable:disabled:hover {
+  background: #351414 !important;
+  color: #ff6b6b !important;
+}
+
+/* Data selecionada */
+.booking-page .react-calendar__tile--active {
+  background: #39ff14 !important;
+  color: #000 !important;
+}
